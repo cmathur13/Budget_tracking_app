@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Table</title>
+    <link rel="stylesheet" href="transactions.component.css">
+</head>
+<body>
+    <div id="d-flex page-content">
+        <div class="container-fluid">
+            <div class="row justify-content">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="table" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Type</th>
+                                        <th scope="col">Amount</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody *ngFor="let category of categories">
+                                    <tr>
+                                        <td>{{category.date | date:'yyyy-MM-dd'}}</td>
+                                        <td>{{category.type}}</td>
+                                        <td>${{category.amount}}</td>
+                                        <td>
+                                            <a [routerLink]="'/transaction/' + category.budgetId" class="btn btn-primary">
+                                                <i class="fas fa-eye"></i> View Transaction
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

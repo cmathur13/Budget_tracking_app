@@ -1,0 +1,234 @@
+/* General Styles
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: 200vb;
+}
+
+#d-flex.page-content{
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    border: none;
+    width: 100%;
+}
+
+.card-body {
+    padding: 0;
+}
+
+/* Table Styles */
+/* .table {
+    border-collapse: collapse;
+    width: 120vb
+}
+
+.table thead th {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.table tbody tr {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+
+.table tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+.table tbody td {
+    padding: 10px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn i {
+    margin-right: 5px;
+}
+
+/* Responsive Design */
+/* @media (max-width: 768px) {
+    .container-fluid {
+        padding: 0 10px;
+    }
+
+    .table thead {
+        display: none;
+    }
+
+    .table tbody tr {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .table tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 5px;
+    }
+
+    .table tbody td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+} */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f0f2f5, #e9ecef);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
+
+#d-flex.page-content {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 30px;
+    border: none;
+    width: 100%;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+    padding: 0;
+}
+
+/* Table Styles */
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table thead th {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.table tbody tr {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+
+.table tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+.table tbody td {
+    padding: 12px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 0 10px;
+    }
+
+    .table thead {
+        display: none;
+    }
+
+    .table tbody tr {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .table tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 5px;
+    }
+
+    .table tbody td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}

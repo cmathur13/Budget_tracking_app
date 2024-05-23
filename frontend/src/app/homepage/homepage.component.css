@@ -1,0 +1,76 @@
+#page-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.input-group-text {
+    background-color: #f0f0f0;
+    border-color: #ced4da;
+}
+
+.error-text {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #dc3545;
+}
+
+.category-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category-option {
+    display: none;
+}
+
+.category-option:checked + label {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.category-option:checked + label i {
+    color: #fff;
+}
+
+.form-check-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.form-check-label i {
+    margin-right: 5px;
+    width: 20px; /* Adjust icon width as needed */
+    height: 20px; /* Adjust icon height as needed */
+}
+
+/* Custom CSS for Improved UI */
+.category-options .form-check-label:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+    }
+}

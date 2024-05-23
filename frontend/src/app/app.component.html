@@ -1,0 +1,37 @@
+<div class="d-flex flex-column flex-md-row" id="wrapper">
+    <div class="border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
+            <div class="user-image-upload">
+                <label for="imageUpload" class="image-label">
+                    <img id="userImage" src="assets/images/user.jpeg" alt="" class="img-thumbnail">
+                    <span class="username-overlay">John Doe</span>
+                </label>
+            </div>
+        </div>
+        <div class="list-group list-group-flush my-3">
+            <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="list-group-item list-group-item-action bg-transparent second-text active"><i class="fas fa-home me-2 mx-3"></i>Home</a>
+            <a routerLink="/transactions" routerLinkActive="active" ariaCurrentWhenActive="page" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-history me-2 mx-3"></i>Transaction</a>
+            <a routerLink="/report" routerLinkActive="active" ariaCurrentWhenActive="page" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-chart-line me-2 mx-3"></i>Reports</a>
+            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-gift me-2 mx-3"></i>Offers</a>
+            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-user me-2 mx-3"></i>Profile</a>
+            <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i class="fas fa-power-off me-2 mx-3"></i>Logout</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h2>Hello User! Welcome to SmartSpend please login to continue</h2>
+                <!-- included SSO with Google -->
+                <a href="#" (click)="signInWithGoogle()" *ngIf="!loggedIn" class="list-group-item list-group-item-action bg-transparent text-success fw-bold"><i class="fas fa-sign-in-alt me-2 mx-3"></i>Login with Google</a>
+                <button (click)="signInWithGoogle()" *ngIf="!loggedIn" class="btn btn-primary">Login</button>
+                <button (click)="signOut()" *ngIf="loggedIn" class="btn btn-danger">Logout</button>
+                <div *ngIf="loggedIn" class="mt-3">
+                    <img [src]="user?.photoUrl" alt="User image" class="img-thumbnail" style="width: 100px;">
+                    <div>{{ user?.name }}</div>
+                    <div>{{ user?.email }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <router-outlet/>
+</div>

@@ -1,0 +1,66 @@
+<div id="d-flex page-content-wrapper">
+    <div class="container-fluid px-4">
+        <div class="row justify-content-center my-5">
+            <div class="col-md-12">
+                <div class="card" width="100%">
+                    <div class="card-body">
+                        <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="month" class="form-label">Month <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="month" formControlName="month">
+                                    <div *ngIf="formSubmitted && createForm.controls.month.hasError('required')" class="text-danger">
+                                        Month is required
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="year" class="form-label">Year <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="year" formControlName="year">
+                                    <div *ngIf="formSubmitted && createForm.controls.year.hasError('required')" class="text-danger">
+                                        Year is required
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center my-5" *ngIf="reportShow">
+            <div class="col-md-12">
+                <div class="card" width="100%">
+                    <div class="card-body">
+                        <table class="table" width="100%">
+                            <thead>
+                              <tr>
+                                <th scope="col">Type</th>
+                                <th scope="col">Total</th>
+                              </tr>
+                            </thead>
+                            <tbody *ngFor="let report of reportInfo">
+                                <tr>
+                                    <td>{{report.type}}</td>
+                                    <td>{{report.totalAmount}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center my-5" *ngIf="reportShow">
+            <div class="col-md-12">
+                <div class="card" width="100%">
+                    <div class="card-body">
+                        <div class="chart">
+                            <apx-chart #chart [series]="chartOptions.series? chartOptions.series: []" [chart]="chartOptions.chart?? {type:'pie'} " [labels]="chartOptions.labels? chartOptions.labels : []" [responsive]="chartOptions.responsive ? chartOptions.responsive : [] ">
+
+                            </apx-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
